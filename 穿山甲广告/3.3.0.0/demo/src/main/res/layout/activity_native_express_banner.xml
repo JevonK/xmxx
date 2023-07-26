@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="click button to load and show banner ad"
+        android:textColor="#3399cc"
+        android:textSize="16sp" />
+
+    <com.union_test.toutiao.view.LoadMoreRecyclerView
+        android:id="@+id/my_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/showBanner"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@+id/my_list"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="showBanner"
+        android:textColor="#3399cc"
+        android:textSize="14sp"
+        android:theme="@style/PrimaryButton" />
+
+    <FrameLayout
+        android:id="@+id/express_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showBanner"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#203399cc" />
+
+
+</RelativeLayout>

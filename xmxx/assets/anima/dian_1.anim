@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dian_1",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 5,
+  "sample": 2,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "opacity": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 2.5,
+          "value": 255
+        },
+        {
+          "frame": 5,
+          "value": 0
+        }
+      ]
+    }
+  },
+  "events": []
+}

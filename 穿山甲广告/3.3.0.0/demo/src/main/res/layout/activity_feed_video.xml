@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_load_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载广告" />
+        <Button
+            android:id="@+id/bt_start_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始播放" />
+        <Button
+            android:id="@+id/bt_pause_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停播放" />
+        <Button
+            android:id="@+id/bt_resume_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="继续播放" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rl_video_ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+        <include
+            android:id="@+id/icon_source_layout"
+            layout="@layout/listitem_ad_icon_source_layout" />
+
+
+        <TextView
+            android:id="@+id/tv_listitem_ad_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon_source_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="请先加载广告"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <VideoView
+            android:id="@+id/iv_listitem_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/tv_listitem_ad_desc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop" />
+
+
+        <!-- title+creativeBtn layout -->
+        <include
+            android:id="@+id/ad_title_creative_btn_layout"
+            layout="@layout/listitem_ad_title_creative_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/iv_listitem_video"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+
+        <!--==== 测试下载状态控制功能 begin ========-->
+        <include
+            layout="@layout/listitem_ad_download_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ad_title_creative_btn_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+        <!--==== 测试下载状态控制功能 end ========-->
+
+    </RelativeLayout>
+</LinearLayout>
